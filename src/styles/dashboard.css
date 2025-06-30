@@ -1,0 +1,171 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #000, #1c1c1c);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* === Dashboard Layout === */
+.dashboard-wrapper {
+  padding-top: 30px;
+  display:grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #111; 
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* === Glass Box === */
+.glass-box {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* === Navbar === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.app-title {
+  font-size: 1.5rem;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* === Timer Section === */
+.timer h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  margin: 0.5rem 0;
+
+}
+
+
+/* === Buttons & Inputs === */
+button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+input {
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  margin: 0 6px;
+  width: 60px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+/* === Music Selector === */
+.music-player {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.music-player select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.music-player audio {
+  display: none;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .navbar, .glass-box {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
